@@ -1,0 +1,12 @@
+{
+  "genotype_size": 100,
+  "source_code_length": 350,
+  "batch_size": 512,
+  "embedding_size": 50,
+  "temperature": 0.01,
+  "prior_temperature": 0.01,
+  "train_test_ratio": 0.99,
+  "learning_rate": 2e-5,
+  "min_backup_interval": 1000,
+  "genotype_alphabet_size": 2
+}

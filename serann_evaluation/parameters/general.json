@@ -1,0 +1,19 @@
+{
+  "sampler": "general",
+  "experiment_id": "ab6119f6-ce23-4443-8bf0-7f7cc70115a9",
+  "generation_step": 250,
+  "samples_per_generation": 3,
+  "total_samples": 20000,
+  "num_evaluations": 5,
+  "replications_per_evaluation": 100,
+
+  "experiment_params": {
+    "max_tokens": 350,
+    "genotype_size": 100,
+    "error_correction_probability": 0,
+    "classification_image_dimensions": [28, 28],
+    "num_classification_classes": 10,
+    "training_epochs": 5,
+    "training_batch_size": 750
+  }
+}

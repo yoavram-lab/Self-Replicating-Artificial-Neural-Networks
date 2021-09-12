@@ -1,0 +1,8 @@
+tensorflow==2.6.0
+tensorflow-probability==0.13.0
+distributed-computing==0.2.0
+pandas==1.3.2
+scipy==1.7.1
+edlib==1.3.9
+sqlalchemy==1.4.23
+pygments==2.10.0

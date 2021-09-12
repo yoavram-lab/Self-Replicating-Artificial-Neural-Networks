@@ -1,0 +1,10 @@
+{
+  "sampler": "mutants",
+  "experiment_id": "48ff2e5d-2a2a-4030-bf89-7f4a0d98eb65",
+  "proofreading_strengths": [0],
+  "generation_step": 1,
+  "samples_per_generation": 0,
+  "total_samples": 10000,
+  "num_evaluations": 50,
+  "replications_per_evaluation": 100
+}
