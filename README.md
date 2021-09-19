@@ -1,8 +1,10 @@
-This codebase implements the experimental framework described in:
+This repository implements the experimental framework described in:
 
 ## Self-Replicating Artificial Neural Networks Give Rise to Complex Evolutionary Dynamics
 By  
-**Boaz Shvartzman & Yoav Ram**
+### Boaz Shvartzman<sup>1</sup> and [Yoav Ram](https://www.yoavram.com)<sup>1,2</sup>
+1) School of Computer Science, Reichman University, Herzliya, Israel
+2) School of Zoology, Faculty of Life Sciences, Tel Aviv University, Tel Aviv, Israel
 
 ### Abstract
 Evolution by natural selection is a universal phenomenon that requires heritable variation to take place.
@@ -36,10 +38,12 @@ The components mentioned above are used for the following tasks, and in this ord
 Alternatively, you can skip steps 1 and 3 and download our [generated synthetic source codes dataset](https://serann.s3.amazonaws.com/data/srann_datasets/generated_27032020.csv), [tokens vocabulary](https://serann.s3.amazonaws.com/data/vocabularies/generated_27032020.csv), and [pretrained ribosomal autoencoder model](https://serann.s3.amazonaws.com/models/genetic_autoencoder/sloppy-cornflower-dane_b69079.zip).
 
 ### Prerequisites
-This code was tested with Python 3.8 on Ubuntu 20.04. The required Python packages are listed in *requirements.txt* and can be simply installed using pip:  
-`pip install -r requirements.txt`
+This code was tested with Python 3.8 on Ubuntu 20.04. The required Python packages are listed in *requirements.txt* and can be installed using pip:  
+`python -m pip install -r requirements.txt`
 
-Some components mentioned above require intensive computations and GPU utilization. For example, to train hundreds of neural networks concurrently, multiple GPUs are needed. 
+Some components mentioned above require intensive computations and GPU utilization.
+For example, multiple GPUs are needed to train hundreds of neural networks concurrently. 
 Because multi-GPU machines are expensive, we developed a Python library for distributed GPU computing. 
-Using this library, multiple machines, each with at least one GPU device, located in different places around to world, can be used as workers to perform multiple GPU intensive tasks.
-The API is similar to multiprocessing.Pool - the standard Python API for multiprocessing. For more information, refer to the [Github page of the library](https://github.com/boaz85/DistributedComputing).
+Using this library, multiple machines, each with at least one GPU device, located in different places around the world, can be used as workers to perform multiple GPU intensive tasks.
+The API is similar to `multiprocessing.Pool`, the standard Python API for multiprocessing.
+For more information, refer to the [Github page of the library](https://github.com/boaz85/DistributedComputing).
