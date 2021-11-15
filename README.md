@@ -1,22 +1,7 @@
 This repository implements the experimental framework described in:
 
-## Self-Replicating Artificial Neural Networks Give Rise to Complex Evolutionary Dynamics
-By  
-### Boaz Shvartzman<sup>1</sup> and [Yoav Ram](https://www.yoavram.com)<sup>1,2</sup>
-1) School of Computer Science, Reichman University, Herzliya, Israel
-2) School of Zoology, Faculty of Life Sciences, Tel Aviv University, Tel Aviv, Israel
-
-### Abstract
-Evolution by natural selection is a universal phenomenon that requires heritable variation to take place.
-Most evolutionary models apply exogenous heuristics to produce this heritable variation:
-mutations do not occur spontaneously during replication,
-but rather they are introduced exogenously by the modeler.
-Here, we present a new model for studying evolution: the Self-Replicating Artificial Neural Network (SeRANN).
-These neural networks are defined by a Python source code, which is mapped to a bit-string genotype and vice-versa using a novel and robust coding scheme based on variational autoencoders.
-SeRANN individuals are trained using gradient descent to self-replicate their own genotype, which introduces endogenous and spontaneous mutations that provide the only source of genetic variation. 
-In parallel with the replication task, SeRANN individuals are trained to perform a classification task that determines their fertility -- the number of offspring they will contribute to the next generation.
-We evolved a population of 1,000 SeRANN individuals for 6,000 generations and documented a variety of complex evolutionary dynamics: 126,158 unique genotypes emerged during the experiment; the distribution of fitness effects (DFE) was similar to those estimated in viruses and microbes; the population evolved a reduced mutation rate as well as mutational robustness; adaptive evolution was prevalent, exhibited by the increase in frequency of multiple mutant alleles and genotypes; clonal interference between competing genotypes prevented any single genotype from taking over the population and reduced the rate of adaptation; both epistatis and phenotypic variation were common and had a complex effect on adaptation; and a trade-off between fertility and replication fidelity emerged, leading to sub-optimal performance of SeRANNs in both tasks.
-Our results suggest that SeRANNs provide a compelling evolutionary model that bridges between experimental evolution with living organisms and theoretical models: it allows us to monitor and evaluate every mutant and every phenotypic trait without explicitly defining the mechanisms of replication and fertility, while giving rise to complex evolutionary dynamics.
+## Self-Replicating Artificial Neural Networks Give Rise to Universal Evolutionary Dynamics
+### Boaz Shvartzman and [Yoav Ram](https://www.yoavram.com)
 
 ## Software
 This repository contains all the necessary components for a full evolutionary experiment on SeRANN:  
