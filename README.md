@@ -32,3 +32,7 @@ Because multi-GPU machines are expensive, we developed a Python library for dist
 Using this library, multiple machines, each with at least one GPU device, located in different places around the world, can be used as workers to perform multiple GPU intensive tasks.
 The API is similar to `multiprocessing.Pool`, the standard Python API for multiprocessing.
 For more information, refer to the [Github page of the library](https://github.com/boaz85/DistributedComputing).
+
+
+### Main experiment results  
+[https://figshare.com/s/f3b14612224d201cfbf2](https://figshare.com/s/f3b14612224d201cfbf2)
