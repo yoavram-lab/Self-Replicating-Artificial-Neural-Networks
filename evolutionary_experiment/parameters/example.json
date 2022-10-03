@@ -1,6 +1,6 @@
 {
-  "num_seranns": 30,
-  "num_generations": 6000,
+  "num_seranns": 50,
+  "num_generations": 100,
   "max_tokens": 350,
   "genotype_size": 100,
   "selection_pressure": 1,
