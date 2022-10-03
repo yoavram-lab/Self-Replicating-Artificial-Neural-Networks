@@ -21,10 +21,10 @@ The components mentioned above are used for the following tasks, and in this ord
 6. (optional) evaluate specific/all genotypes retrospectively and more accurately using the SeRANN evaluation script. 
 
 Alternatively, you can skip steps 1 to 4 and:  
-1. Download our [pre-generated synthetic source codes dataset](https://serann.s3.amazonaws.com/data/srann_datasets/generated_27032020.csv) and place it under data/synthetic_datasets  
-2. Download our [pre-generated tokens vocabulary](https://serann.s3.amazonaws.com/data/vocabularies/generated_27032020.csv) and place it under data/vocabularies
-3. Download our [pre-generated encoded synthetic source codes dataset](https://drive.google.com/file/d/1uG235QB9ZcxF1vRh2XNvsgaY1TqAkdgX/view?usp=sharing) and place it under data/encodings_datasets  
-4. Download [pre-trained ribosomal autoencoder model](https://serann.s3.amazonaws.com/models/genetic_autoencoder/sloppy-cornflower-dane_b69079.zip), unzip it place the extracted directory under models/ribosomal_autoencoder.  
+1. Download our [pre-generated synthetic source codes dataset](https://figshare.com/ndownloader/files/37700322?private_link=f3b14612224d201cfbf2). It is not used directly by the evoluationary experiment, but is useful in order to train a new ribosomal autoencoder from scratch.  
+2. Download our [pre-generated tokens vocabulary](https://figshare.com/ndownloader/files/37700310?private_link=f3b14612224d201cfbf2) and place it under data/vocabularies
+3. Download our [pre-generated encoded synthetic source codes dataset](https://figshare.com/ndownloader/files/37700325?private_link=f3b14612224d201cfbf2) and place it under data/encodings_datasets  
+4. Download [pre-trained ribosomal autoencoder model](https://figshare.com/ndownloader/files/37700277?private_link=f3b14612224d201cfbf2), unzip it place the extracted directory under models/ribosomal_autoencoder.  
 
 ### Prerequisites
 This code was tested with Python 3.8 on Ubuntu 20.04. The required Python packages are listed in *requirements.txt* and can be installed using pip:  
