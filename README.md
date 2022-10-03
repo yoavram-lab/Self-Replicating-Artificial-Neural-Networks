@@ -42,7 +42,7 @@ For more information, refer to the [Github page of the library](https://github.c
 This repository contains an example parameters file under evolutionary_experiment/parameters. With the provided pre-generated and pre-trained files, it can be used to evolve a small population of 50 SeRANNs on a single GPU for 100 generations. Most of the modern GPUs should be able to support populations of up to 100 SeRANNs. We used 8 nVIDIA Tesla V100 GPUs to evolve a population of 1000 SeRANNs.  
 To run the evoluationary experiment, navigate to the project's root and run:  
 
-python evolutionary_experiment/run_experiment --parameters=evolutionary_experiment/parameters/example.json  
+`python evolutionary_experiment/run_experiment --parameters=evolutionary_experiment/parameters/example.json`  
 
 On nVIDIA Titan X, a single generation execution time takes between 1 to 3 minutes. Thus, a whole experiment of 100 generations should take approximately 3 and a half hours. Note that due to the small size of the population, it might collapse during the first generations, before reaching lower mutation rates and stablizing. In this case, no valid SeRANN is left to reproduce and the experiment ends.
 
