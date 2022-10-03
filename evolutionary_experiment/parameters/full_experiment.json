@@ -1,0 +1,21 @@
+{
+  "num_seranns": 1000,
+  "num_generations": 6000,
+  "max_tokens": 350,
+  "genotype_size": 100,
+  "selection_pressure": 1,
+  "max_serann_parameters": 2e+6,
+  "classification_image_dimensions": [28, 28],
+  "num_classification_classes": 10,
+  "training_epochs": 5,
+  "training_batch_size": 750,
+  "offspring_selection_strategy": "random",
+  "error_correction_probability": 0,
+  "initial_offspring_pool_size": 10,
+  "offspring_pool_size_factor": 5,
+  "ancestor_genotype": [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1,
+       0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1,
+       0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0,
+       0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0,
+       0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1]
+}
