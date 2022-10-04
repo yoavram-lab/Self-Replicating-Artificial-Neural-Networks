@@ -4,16 +4,16 @@ This repository implements the experimental framework described in:
 ### Boaz Shvartzman and [Yoav Ram](https://www.yoavram.com)
 
 ## Software
-This repository contains all the necessary components for a full evolutionary experiment on SeRANN:  
+This repository contains all the necessary components for a full evolutionary experiment with SeRANN (Self-Replicating Artificial Neural Networks):  
 
-* Synthetic SeRANN generator: in order to train the ribosomal autoencoder, a dataset of diverse SeRANN source code examples is needed. This script generates as many examples as needed, according to a predefined transitions map.
-* Helper scripts: before the ribosomal autoencoder training, the generated SeRANN source codes must be converted to numeric tokens. After the training, the dataset must also be encoded to binary genotypes, so the SeRANN could train on it to replicate. For both of these conversions, helper scripts are provided.
 * Ribosomal autoencoder: the ribosomal autoencoder model definition and training script.
+* Synthetic SeRANN generator: to train the ribosomal autoencoder, a dataset of diverse SeRANN source code examples is needed. This script generates as many examples as needed, according to a predefined transitions map.
+* Helper scripts: before training the ribosomal autoencoder, the generated SeRANN source codes must be converted to numeric tokens. After training the ribosomal autoencoder, the dataset must be encoded to binary genotypes, so that SeRANN could train on it for their replication task. For both of these conversions, helper scripts are provided.
 * Evolutionary experiment: the main part of this work. This module is used to run the evolutionary experiment and collect the results.
-* SeRANN evaluation: some properties of SeRANN, such as fertility and mutation rate, can be measured more accurately using multiple training and evaluation cycles. This script facilitates this repeated evaluation procedure.
+* SeRANN evaluation: some properties of SeRANN, such as fertility and mutation rate, can be measured more accurately using multiple training and evaluation cycles. This script facilitates the repeated evaluation procedure.
 
-The components mentioned above are used for the following tasks, and in this order:
-1. Generate a synthetic SeRANN source codes dataset.
+The components mentioned above are used in the following stages, and in this order:
+1. Generate a synthetic SeRANN source code dataset.
 2. Convert the dataset source codes to numeric token sequences.
 3. Train the ribosomal autoencoder on the numeric token sequences.
 4. Use the trained ribosomal autoencoder to encode the numeric token sequences into genotype vectors. 
@@ -36,7 +36,7 @@ For example, multiple GPUs are needed to train hundreds of neural networks concu
 Because multi-GPU machines are expensive, we developed a Python library for distributed GPU computing. 
 Using this library, multiple machines, each with at least one GPU device, located in different places around the world, can be used as workers to perform multiple GPU intensive tasks.
 The API is similar to `multiprocessing.Pool`, the standard Python API for multiprocessing.
-For more information, refer to the [Github page of the library](https://github.com/boaz85/DistributedComputing).
+For more information, refer to the [Github repository of the library](https://github.com/boaz85/DistributedComputing).
 
 ### Example small-scale evolutionary experiment   
 This repository contains an example parameters file under evolutionary_experiment/parameters. With the provided pre-generated and pre-trained files, it can be used to evolve a small population of 50 SeRANNs on a single GPU for 100 generations. Most of the modern GPUs should be able to support populations of up to 100 SeRANNs. We used 8 nVIDIA Tesla V100 GPUs to evolve a population of 1000 SeRANNs.  
@@ -44,7 +44,7 @@ To run the evoluationary experiment, navigate to the project's root and run:
 
 `python evolutionary_experiment/run_experiment --parameters=evolutionary_experiment/parameters/example.json`  
 
-On nVIDIA Titan X, a single generation execution time takes between 1 to 3 minutes. Thus, a whole experiment of 100 generations should take approximately 3 and a half hours. Note that due to the small size of the population, it might collapse during the first generations, before reaching lower mutation rates and stablizing. In this case, no valid SeRANN is left to reproduce and the experiment ends.
+On nVIDIA Titan X, a single generation execution time takes between 1 to 3 minutes. Thus, a whole experiment of 100 generations should take approximately 3.5 hours. Note that due to the small size of the population, it might collapse during the first generations, before reaching lower mutation rates and stablizing. In this case, no valid SeRANN is left to reproduce and the experiment ends.
 
 ### Results
 
