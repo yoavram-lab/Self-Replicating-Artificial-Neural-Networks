@@ -48,7 +48,8 @@ On nVIDIA Titan X, a single generation execution time takes between 1 to 3 minut
 
 ### Results
 
-The experiment results are written to an SQLite database file (generated in data/experiment_results) and updated after each generation is ended. The structure of the results DB and the meaning of each column in the tables are explained below.  
+The experiment results are written to an SQLite database file (generated in data/experiment_results) and updated after each generation ends.
+The structure of the results DB and the meaning of each column in the tables are explained below.  
 
 **execution_info**: experiment execution parameters and info.  
 ├── ancestor_genotye: the genotype of the ancestor, as bitstring.  
@@ -134,5 +135,5 @@ The experiment results are written to an SQLite database file (generated in data
 
 
 ### Main experiment results  
-The results file of our main experiment, as described in the paper are available here:  
-[https://figshare.com/s/f3b14612224d201cfbf2](https://figshare.com/s/f3b14612224d201cfbf2)
+The results of our main experiment, as described in the paper, are available as an SQLite file here:
+[https://figshare.com/s/f3b14612224d201cfbf2](https://figshare.com/s/f3b14612224d201cfbf2).
