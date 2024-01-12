@@ -49,6 +49,9 @@ def get_serann_training_data(encodings_dataset_path, num_classification_classes)
 
     genotype_train = encoded_serann[:len(classification_x_train)]
 
+    #classification_x_train = np.random.random(classification_x_train.shape).astype(classification_x_train.dtype) ##############################################
+    classification_x_test = np.random.random(classification_x_test.shape).astype(classification_x_test.dtype)
+
     train_x = [classification_x_train, np.expand_dims(genotype_train, 2)]
     train_y = [classification_y_train, np.expand_dims(genotype_train, 1)]
 

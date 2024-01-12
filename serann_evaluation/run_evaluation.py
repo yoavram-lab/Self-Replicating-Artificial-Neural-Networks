@@ -46,6 +46,9 @@ class MetaSampler(type):
 
 class SamplerInterface(object, metaclass=MetaSampler):
 
+    def __init__(self, random_seed):
+        np.random.seed(random_seed)
+
     def sample(self, df, parameters):
         raise NotImplemented
 
@@ -172,7 +175,7 @@ if __name__ == '__main__':
     if parameters['sampler'] not in SAMPLERS:
         raise Exception('Unknown sampler')
 
-    sample = SAMPLERS[parameters['sampler']]().sample(df, parameters)
+    sample = SAMPLERS[parameters['sampler']](1234).sample(df, parameters)
 
     sample = sample.drop_duplicates()
 

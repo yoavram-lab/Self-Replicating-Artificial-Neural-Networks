@@ -4,7 +4,17 @@
   "proofreading_strengths": [0],
   "generation_step": 1,
   "samples_per_generation": 0,
-  "total_samples": -1,
+  "total_samples": 100,
   "num_evaluations": 50,
-  "replications_per_evaluation": 100
+  "replications_per_evaluation": 100,
+
+  "experiment_params": {
+    "max_tokens": 350,
+    "genotype_size": 100,
+    "error_correction_probability": 0,
+    "classification_image_dimensions": [28, 28],
+    "num_classification_classes": 10,
+    "training_epochs": 5,
+    "training_batch_size": 750
+  }
 }
